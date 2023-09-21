@@ -1,0 +1,42 @@
+{
+  "Address": {
+    "Street": "",
+    "City": "",
+    "Region": "",
+    "PostalCode": "",
+    "Type": "House"
+  },
+  "Coupons": [],
+  "CustomerID": "",
+  "PhonePrefix": "",
+  "Extension": "",
+  "OrderChannel": "OLO",
+  "OrderID": "",
+  "OrderInfoCollection": [],
+  "HotspotsLite": "",
+  "IP": "",
+  "NoCombine": true,
+  "OrderMethod": "Web",
+  "OrderTaker": null,
+  "Payments": [],
+  "Products": [],
+  "Promotions": {},
+  "Market": "",
+  "Currency": "",
+  "ServiceMethod": "Delivery",
+  "Tags": {},
+  "UserAgent": "",
+  "Version": "1.0",
+  "SourceOrganizationURI": "order.dominos.com",
+  "LanguageCode": "en",
+  "Partners": {},
+  "NewUser": true,
+  "metaData": {
+    "CalculateNutrition": true
+  },
+  "Amounts": {},
+  "BusinessDate": "",
+  "EstimatedWaitMinutes": "",
+  "PriceOrderTime": "",
+  "AmountsBreakdown": {}
+}
