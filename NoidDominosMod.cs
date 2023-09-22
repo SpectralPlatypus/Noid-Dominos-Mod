@@ -29,7 +29,8 @@ namespace NoidDominos
 
         private void OnSceneChange(Scene oldScene, Scene newScene)
         {
-            if (newScene.name == "void")
+            if (newScene.name == "void" &&
+                (SaveScript.isLevelDone("LeviLevle") || SaveScript.isLevelDone("dungeon") || SaveScript.isLevelDone("PZNTv5")))
             {
                 Basic_NPC pizzaNPC = null;
                 var npcs = Object.FindObjectsOfType<Basic_NPC>();

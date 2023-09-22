@@ -126,6 +126,10 @@ namespace NoidDominos
             /// </summary>
             ORDER_IN_PROGRESS,
             /// <summary>
+            /// Interim state during order web-request
+            /// </summary>
+            ORDER_IN_COROUTINE,
+            /// <summary>
             /// Tracking dialog after a successful order
             /// </summary>
             TRACKING,
@@ -183,7 +187,8 @@ namespace NoidDominos
             if (OrderState == State.INFO || 
                 OrderState == State.INFO_DONE || 
                 OrderState == State.SELECTION || 
-                OrderState == State.SELECTION_DONE)
+                OrderState == State.SELECTION_DONE ||
+                OrderState == State.ORDER_IN_COROUTINE)
                 return;
 
             orig(self);
@@ -212,7 +217,7 @@ namespace NoidDominos
                 case State.DIAL1: OrderState = State.SELECTION; break;
                 case State.DIAL2: OrderState = State.ORDER_PENDING; break;
                 case State.ORDER_IN_PROGRESS:
-                    // TODO: Prevent dialogue while order coroutine is running to avoid double orders
+                    OrderState = State.ORDER_IN_COROUTINE;
                     StartCoroutine(PlaceOrder());
                     break;
             }
