@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -346,7 +345,6 @@ namespace DominoSharp
             if (response["Status"].GetNatural() == -1)
                 throw new Exception("Dominos returned -1 due to order being, \"" + errorReason(response["Order"]) + "\" | Response: " + response.ToString());
 
-            //data["Payments"][0]["Type"] = "Cash";
             return response;
         }
 

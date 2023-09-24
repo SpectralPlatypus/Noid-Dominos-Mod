@@ -1,12 +1,6 @@
-﻿using System;
-using System.IO;
-using System.Linq;
-using System.Net;
+﻿using System.Net;
 using System.Security.Authentication;
-using System.Text;
-using System.Xml;
 using LitJson;
-using UnityEngine;
 using UnityEngine.Networking;
 
 namespace DominoSharp
@@ -24,31 +18,7 @@ namespace DominoSharp
         /// <returns>an HTTP GET Request on url as a JObject</returns>
         public static JsonData request_JSON(string url)
         {
-            //JsonUtility.FromJson<Store>(requestData(url));
             return JsonMapper.ToObject(requestData(url));
-        }
-
-        /// <summary>
-        /// Returns an HTTP GET Request on URL as a JObject but the URL is for XML
-        /// </summary>
-        /// <param name="URL">An XML page</param>
-        /// <returns>an HTTP GET Request on XML URL as a JObject</returns>
-        public static JsonData request_XML(string URL)
-        {
-            // Get our XML data
-            string XML = requestData(URL);
-            // Remove some of the junk lines of XML.
-            XML = string.Join(Environment.NewLine, XML.Split(Environment.NewLine.ToCharArray()).Skip(4).ToArray().Reverse().Skip(3).Reverse().ToArray());
-
-            // Create a new XML doc to fill with our XML.
-            XmlDocument doc = new XmlDocument();
-            // Fill our XML
-            doc.LoadXml(XML);
-            // Convert the XML to JSON
-            string JSON = "";//JsonConvert.SerializeXmlNode(doc);
-            // Parse it as a JObject
-            var defaultReader = new JsonReader(JSON);
-            return JsonMapper.ToJson(defaultReader);
         }
 
         /// <summary>
@@ -67,9 +37,7 @@ namespace DominoSharp
                 {
                     System.Threading.Thread.Sleep(10);
                 }
-                // Logger.Log(uwr.responseCode);
                 responseString = uwr.downloadHandler.text;
-                //Logger.Log(responseContent);
             }
             return responseString;
         }

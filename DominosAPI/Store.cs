@@ -23,7 +23,7 @@ namespace DominoSharp
         }
 
         /// <summary>
-        /// Creates a new store object, generally assumed to be in USA
+        /// Creates a new store object, generally assumed to be in Canada
         /// </summary>
         /// <param name="ID">The ID of the Store by dominos</param>
         /// <param name="array">The JObject of data about the store</param>
@@ -33,18 +33,6 @@ namespace DominoSharp
             this.data = array;
             this.country = URLs.Country.CANADA;
         }
-
-        /// <summary>
-        /// Creates a new store object, generally assumed to be in USA
-        /// </summary>
-        /// <param name="ID">The ID of the Store by dominos</param>
-        /// <param name="array">The JObject of data about the store</param>
-        /*public Store(JValue ID, JsonData array)
-        {
-            this.ID = ID.Value.ToString();
-            this.data = array;
-            this.country = URLs.Country.USA;
-        }*/
 
         #endregion
 

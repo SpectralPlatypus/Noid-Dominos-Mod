@@ -1,9 +1,6 @@
 ﻿using Pepperoni;
-using System.Text;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using NoidDominos.Properties;
-using Resources = NoidDominos.Properties.Resources;
 
 namespace NoidDominos
 {
