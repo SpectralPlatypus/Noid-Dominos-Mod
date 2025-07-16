@@ -1,6 +1,6 @@
 ﻿# Noid Domino's Mod
 
-This is a mod for [Yo! Noid 2: Game of a Year Edition](noid.pizza) that adds integrates Domino's Pizza API via a new NPC. Now you can order pizza from the comfort of your home, without having to switch windows out of your favorite video game!
+This is a mod for [Yo! Noid 2: Game of a Year Edition](noid.pizza) that integrates Domino's Pizza API into the game via a new NPC. Now you can order pizza from the comfort of your home, without having to tab out of your favorite video game!
 
 ![noid_pizza0](https://github.com/SpectralPlatypus/Noid-Dominos-Mod/assets/50896763/0349dc34-d5ba-4e62-9bdf-790ec506b6af)
 
